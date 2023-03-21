@@ -37,11 +37,9 @@ class _HomeState extends State<Home> {
     permission = await geolocatorPlatform.checkPermission();
     if (permission == LocationPermission.denied ||
         permission == LocationPermission.unableToDetermine) {
-      print("permission denied");
       permission = await geolocatorPlatform.requestPermission();
       if (permission != LocationPermission.denied) {
         if (permission == LocationPermission.deniedForever) {
-          print("permission permanently denied");
           setState((){
             isDataLoaded = true;
             isErrorOccured = true;
@@ -120,7 +118,7 @@ class _HomeState extends State<Home> {
                   Expanded(
                     flex: 4,
                     child: Padding(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       child: TextField(
                         decoration: TextFieldInputDecoration,
                         onSubmitted: (String typedName) {
@@ -149,7 +147,7 @@ class _HomeState extends State<Home> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
-                        child: Container(
+                        child: SizedBox(
                           height: 67,
                           child: Row(
                             children: [
@@ -202,7 +200,7 @@ class _HomeState extends State<Home> {
                           style: KTempTextStyle,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 12),
+                          padding: const EdgeInsets.only(left: 12),
                           child: Text(
                             weatherModel!.description!,
                             style: KLocationTextStyle,
@@ -226,8 +224,8 @@ class _HomeState extends State<Home> {
                             value:
                                 '${weatherModel != null ? weatherModel!.feelsLike!.round() : 0}°',
                             title: 'FEELS LIKE'),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 15),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15),
                           child: VerticalDivider(
                             thickness: 1,
                           ),
@@ -236,8 +234,8 @@ class _HomeState extends State<Home> {
                             value:
                                 '${weatherModel != null ? weatherModel!.humidity! : 0}%',
                             title: 'HUMIDITY'),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 15),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15),
                           child: VerticalDivider(
                             thickness: 1,
                           ),
