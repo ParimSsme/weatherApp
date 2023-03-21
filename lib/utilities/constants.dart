@@ -4,20 +4,20 @@ import 'package:google_fonts/google_fonts.dart';
 const apiKey = 'f58ef0b6dc7c535f3283ee133ab734b7';
 const openWeatherMapURL = "https://api.openweathermap.org/data/2.5/weather";
 
-const KLightColor = Colors.white;
-const KMidLightColor = Colors.white60;
-const KOverLayColor = Colors.white10;
-const KDarkColor = Colors.white24;
-var KTextFieldTextStyle = GoogleFonts.monda(
-  color: KMidLightColor,
+const kLightColor = Colors.white;
+const kMidLightColor = Colors.white60;
+const kOverLayColor = Colors.white10;
+const kDarkColor = Colors.white24;
+var kTextFieldTextStyle = GoogleFonts.monda(
+  color: kMidLightColor,
   fontSize: 16,
 );
 
 var TextFieldInputDecoration = InputDecoration(
-  fillColor: KOverLayColor,
+  fillColor: kOverLayColor,
   filled: true,
   hintText: 'Enter City Name',
-  hintStyle: KTextFieldTextStyle,
+  hintStyle: kTextFieldTextStyle,
   border: const OutlineInputBorder(
     borderSide: BorderSide.none,
     borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -33,22 +33,22 @@ var KLocationTextStyle = GoogleFonts.monda(
 var DetailsTextStyle = GoogleFonts.monda(
   fontSize: 18,
   fontWeight: FontWeight.bold,
-  color: KLightColor,
+  color: kLightColor,
 );
 
 var KTempTextStyle = GoogleFonts.daysOne(
   fontSize: 80,
   fontWeight: FontWeight.w900,
-  color: KLightColor,
+  color: kLightColor,
 );
 
 var KDetailsTitleTextStyle = GoogleFonts.monda(
   fontSize: 20,
-  color: KDarkColor,
+  color: kDarkColor,
 );
 
 var KDetailsSuffixTextStyle = GoogleFonts.monda(
   fontSize: 14,
   fontWeight: FontWeight.normal,
-  color: KMidLightColor,
+  color: kMidLightColor,
 );

@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
     } else {
       return Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: KOverLayColor,
+        backgroundColor: kOverLayColor,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -160,7 +160,7 @@ class _HomeState extends State<Home> {
                             children: [
                               Text(
                                 'My Location',
-                                style: KTextFieldTextStyle,
+                                style: kTextFieldTextStyle,
                               ),
                               const SizedBox(
                                 width: 4,
@@ -196,7 +196,7 @@ class _HomeState extends State<Home> {
                         ),
                         SvgPicture.asset(
                           weatherModel!.icon!,
-                          color: KLightColor,
+                          color: kLightColor,
                           height: 180,
                         ),
                         const SizedBox(
@@ -218,7 +218,7 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
-                  color: KOverLayColor,
+                  color: kOverLayColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
