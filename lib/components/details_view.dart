@@ -17,7 +17,7 @@ class DetailsWidgets extends StatelessWidget {
         RichText(
           text: TextSpan(
             text: value,
-            style: DetailsTextStyle,
+            style: detailsTextStyle,
             children: <TextSpan>[
               TextSpan(text: title == 'WIND' ? 'km/hr':'',
                   style: kDetailsSuffixTextStyle
@@ -25,7 +25,7 @@ class DetailsWidgets extends StatelessWidget {
             ],
           ),
         ),
-        Text(title, style: KDetailsTitleTextStyle,),
+        Text(title, style: kDetailsTitleTextStyle,),
       ],
     );
   }

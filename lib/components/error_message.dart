@@ -15,7 +15,7 @@ class ErrorMessage extends StatelessWidget {
           children: [
             const Icon(Icons.error_rounded, size: 150,),
             const SizedBox(height: 20,),
-            Text(title, style: KDetailsTitleTextStyle,),
+            Text(title, style: kDetailsTitleTextStyle,),
             const SizedBox(height: 8,),
             Text(message, style: kLocationTextStyle, textAlign: TextAlign.center,)
           ],

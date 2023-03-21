@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: TextField(
-                        decoration: TextFieldInputDecoration,
+                        decoration: textFieldInputDecoration,
                         onSubmitted: (String typedName) {
                           setState((){
                             isDataLoaded = false;

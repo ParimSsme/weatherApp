@@ -13,7 +13,7 @@ var kTextFieldTextStyle = GoogleFonts.monda(
   fontSize: 16,
 );
 
-var TextFieldInputDecoration = InputDecoration(
+var textFieldInputDecoration = InputDecoration(
   fillColor: kOverLayColor,
   filled: true,
   hintText: 'Enter City Name',
@@ -30,7 +30,7 @@ var kLocationTextStyle = GoogleFonts.monda(
   color: Colors.white,
 );
 
-var DetailsTextStyle = GoogleFonts.monda(
+var detailsTextStyle = GoogleFonts.monda(
   fontSize: 18,
   fontWeight: FontWeight.bold,
   color: kLightColor,
@@ -42,7 +42,7 @@ var kTempTextStyle = GoogleFonts.daysOne(
   color: kLightColor,
 );
 
-var KDetailsTitleTextStyle = GoogleFonts.monda(
+var kDetailsTitleTextStyle = GoogleFonts.monda(
   fontSize: 20,
   color: kDarkColor,
 );
