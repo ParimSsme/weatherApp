@@ -223,30 +223,36 @@ class _HomeState extends State<Home> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        DetailsWidgets(
-                            value:
-                                '${weatherModel != null ? weatherModel!.feelsLike!.round() : 0}°',
-                            title: 'FEELS LIKE'),
+                        Expanded(
+                          child: DetailsWidgets(
+                              value:
+                                  '${weatherModel != null ? weatherModel!.feelsLike!.round() : 0}°',
+                              title: 'FEELS LIKE'),
+                        ),
                         const Padding(
                           padding: EdgeInsets.symmetric(vertical: 15),
                           child: VerticalDivider(
                             thickness: 1,
                           ),
                         ),
-                        DetailsWidgets(
-                            value:
-                                '${weatherModel != null ? weatherModel!.humidity! : 0}%',
-                            title: 'HUMIDITY'),
+                        Expanded(
+                          child: DetailsWidgets(
+                              value:
+                              '${weatherModel != null ? weatherModel!.humidity! : 0}%',
+                              title: 'HUMIDITY'),
+                        ),
                         const Padding(
                           padding: EdgeInsets.symmetric(vertical: 15),
                           child: VerticalDivider(
                             thickness: 1,
                           ),
                         ),
-                        DetailsWidgets(
-                            value:
-                                '${weatherModel != null ? weatherModel!.wind!.round() : 0}',
-                            title: 'WIND'),
+                        Expanded(
+                          child: DetailsWidgets(
+                              value:
+                                  '${weatherModel != null ? weatherModel!.wind!.round() : 0}',
+                              title: 'WIND'),
+                        ),
                       ],
                     ),
                   ),
