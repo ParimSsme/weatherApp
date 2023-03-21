@@ -199,7 +199,7 @@ class _HomeState extends State<Home> {
                         ),
                         Text(
                           "${weatherModel != null ? weatherModel!.temperature! : 0}\u00B0",
-                          style: KTempTextStyle,
+                          style: kTempTextStyle,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 12),

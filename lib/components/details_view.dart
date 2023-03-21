@@ -20,7 +20,7 @@ class DetailsWidgets extends StatelessWidget {
             style: DetailsTextStyle,
             children: <TextSpan>[
               TextSpan(text: title == 'WIND' ? 'km/hr':'',
-                  style: KDetailsSuffixTextStyle
+                  style: kDetailsSuffixTextStyle
               ),
             ],
           ),

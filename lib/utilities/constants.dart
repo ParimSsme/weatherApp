@@ -36,7 +36,7 @@ var DetailsTextStyle = GoogleFonts.monda(
   color: kLightColor,
 );
 
-var KTempTextStyle = GoogleFonts.daysOne(
+var kTempTextStyle = GoogleFonts.daysOne(
   fontSize: 80,
   fontWeight: FontWeight.w900,
   color: kLightColor,
@@ -47,7 +47,7 @@ var KDetailsTitleTextStyle = GoogleFonts.monda(
   color: kDarkColor,
 );
 
-var KDetailsSuffixTextStyle = GoogleFonts.monda(
+var kDetailsSuffixTextStyle = GoogleFonts.monda(
   fontSize: 14,
   fontWeight: FontWeight.normal,
   color: kMidLightColor,
