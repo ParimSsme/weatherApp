@@ -17,7 +17,7 @@ class ErrorMessage extends StatelessWidget {
             const SizedBox(height: 20,),
             Text(title, style: KDetailsTitleTextStyle,),
             const SizedBox(height: 8,),
-            Text(message, style: KLocationTextStyle, textAlign: TextAlign.center,)
+            Text(message, style: kLocationTextStyle, textAlign: TextAlign.center,)
           ],
         ),
       ),

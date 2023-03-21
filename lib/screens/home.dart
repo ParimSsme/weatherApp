@@ -185,7 +185,7 @@ class _HomeState extends State<Home> {
                             ),
                             Text(
                               weatherModel!.location!,
-                              style: KLocationTextStyle,
+                              style: kLocationTextStyle,
                             ),
                           ],
                         ),
@@ -205,7 +205,7 @@ class _HomeState extends State<Home> {
                           padding: const EdgeInsets.only(left: 12),
                           child: Text(
                             weatherModel!.description!,
-                            style: KLocationTextStyle,
+                            style: kLocationTextStyle,
                           ),
                         ),
                       ],
