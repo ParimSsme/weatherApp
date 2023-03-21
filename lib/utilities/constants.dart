@@ -16,7 +16,7 @@ var kTextFieldTextStyle = GoogleFonts.monda(
 var textFieldInputDecoration = InputDecoration(
   fillColor: kOverLayColor,
   filled: true,
-  hintText: 'Enter City Name',
+  hintText: 'City Name',
   hintStyle: kTextFieldTextStyle,
   border: const OutlineInputBorder(
     borderSide: BorderSide.none,

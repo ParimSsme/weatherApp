@@ -118,7 +118,7 @@ class _HomeState extends State<Home> {
               Row(
                 children: [
                   Expanded(
-                    flex: 4,
+                    flex: 5,
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: TextField(
@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   Expanded(
-                    flex: 3,
+                    flex: 5,
                     child: Padding(
                       padding: const EdgeInsets.only(right: 5),
                       child: ElevatedButton(
@@ -152,6 +152,7 @@ class _HomeState extends State<Home> {
                         child: SizedBox(
                           height: 67,
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 'My Location',
