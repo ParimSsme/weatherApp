@@ -11,6 +11,8 @@ import '../models/weather_model.dart';
 import '../utilities/weather_icons.dart';
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }

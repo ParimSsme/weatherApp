@@ -6,11 +6,11 @@ class DetailsWidgets extends StatelessWidget {
   String title;
   String value;
 
-  DetailsWidgets({required this.title, required this.value});
+  DetailsWidgets({super.key, required this.title, required this.value});
 
   @override
   Widget build(BuildContext context) {
-    String detail = title == 'WIND' ? 'km/':'';
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -19,7 +19,9 @@ class DetailsWidgets extends StatelessWidget {
             text: value,
             style: DetailsTextStyle,
             children: <TextSpan>[
-              TextSpan(text: title == 'WIND' ? 'km/hr':'', style: KDetailsSuffixTextStyle),
+              TextSpan(text: title == 'WIND' ? 'km/hr':'',
+                  style: KDetailsSuffixTextStyle
+              ),
             ],
           ),
         ),

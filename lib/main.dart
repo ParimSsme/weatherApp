@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Clima Weather App',
       theme: ThemeData.dark(),
-      home: Home(),
+      home: const Home(),
     );
   }
 }
