@@ -25,7 +25,7 @@ var TextFieldInputDecoration = InputDecoration(
   prefixIcon: const Icon(Icons.search),
 );
 
-var KLocationTextStyle = GoogleFonts.monda(
+var kLocationTextStyle = GoogleFonts.monda(
   fontSize: 25,
   color: Colors.white,
 );
