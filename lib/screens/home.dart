@@ -49,11 +49,9 @@ class _HomeState extends State<Home> {
             message = 'Please provide permission to the app from device settings';
           });
         } else {
-          print('permission granted');
           updateUI();
         }
       } else {
-        print('user denied the request');
         updateUI(cityName: 'herat');
       }
     } else {
@@ -146,7 +144,7 @@ class _HomeState extends State<Home> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.white10,
+                          backgroundColor: Colors.white10,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
