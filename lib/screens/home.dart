@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
   WeatherModel? weatherModel;
   int code = 0;
   Weather weather = Weather();
-  var weatherData;
+  dynamic weatherData;
   String? title, message;
 
   @override
