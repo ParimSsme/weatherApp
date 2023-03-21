@@ -14,14 +14,14 @@ class LoadingWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: const [
             SpinKitPulse(
-              color: KLightColor,
+              color: kLightColor,
               size: 100,
             ),
             SizedBox(height: 10,),
             Text('Fetching data...',
                style: TextStyle(
                  fontSize: 20,
-                 color: KMidLightColor
+                 color: kMidLightColor
                ),)
           ],
         ),
