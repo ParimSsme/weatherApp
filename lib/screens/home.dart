@@ -61,14 +61,14 @@ class _HomeState extends State<Home> {
 
   void updateUI({String? cityName}) async {
     weatherData = null;
-    if(cityName==null || cityName==''){
+    if (cityName == null || cityName == '') {
       if (!await geolocatorPlatform.isLocationServiceEnabled()) {
         setState(() {
           isErrorOccured = true;
           isDataLoaded = true;
           title = 'Location is turned off';
           message =
-          'Please enable the location service to see weather condition for your location';
+              'Please enable the location service to see weather condition for your location';
         });
         return;
       }
@@ -77,8 +77,8 @@ class _HomeState extends State<Home> {
       weatherData = await weather.getCityWeather(cityName);
     }
 
-    if (weatherData==null){
-      setState((){
+    if (weatherData == null) {
+      setState(() {
         title = 'City not found';
         message = 'Please make sure you have entered the right city name';
         isDataLoaded = true;
@@ -124,7 +124,7 @@ class _HomeState extends State<Home> {
                       child: TextField(
                         decoration: textFieldInputDecoration,
                         onSubmitted: (String typedName) {
-                          setState((){
+                          setState(() {
                             isDataLoaded = false;
                             updateUI(cityName: typedName);
                           });
@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(right: 5),
                       child: ElevatedButton(
                         onPressed: () {
-                          setState((){
+                          setState(() {
                             isDataLoaded = false;
                             getPermission();
                           });
@@ -238,7 +238,7 @@ class _HomeState extends State<Home> {
                         Expanded(
                           child: DetailsWidgets(
                               value:
-                              '${weatherModel != null ? weatherModel!.humidity! : 0}%',
+                                  '${weatherModel != null ? weatherModel!.humidity! : 0}%',
                               title: 'HUMIDITY'),
                         ),
                         const Padding(
