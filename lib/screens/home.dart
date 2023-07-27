@@ -41,11 +41,12 @@ class _HomeState extends State<Home> {
       permission = await geolocatorPlatform.requestPermission();
       if (permission != LocationPermission.denied) {
         if (permission == LocationPermission.deniedForever) {
-          setState((){
+          setState(() {
             isDataLoaded = true;
             isErrorOccured = true;
             title = 'Permission permanently denied';
-            message = 'Please provide permission to the app from device settings';
+            message =
+                'Please provide permission to the app from device settings';
           });
         } else {
           updateUI();
@@ -104,12 +105,25 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return !isDataLoaded  ? const LoadingWidget() : const LoadedData();
+    return !isDataLoaded
+        ? const LoadingWidget()
+        : LoadedData(weatherModel: weatherModel,onChangedCity: (city) {
+      setState(() {
+          isDataLoaded = false;
+          updateUI(cityName: city);
+        });
+    });
   }
 }
 
 class LoadedData extends StatelessWidget {
-  const LoadedData({super.key});
+  final WeatherModel? weatherModel;
+  final void Function(String city) onChangedCity;
+  const LoadedData({
+    super.key,
+    required this.weatherModel,
+    required this.onChangedCity,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -129,10 +143,7 @@ class LoadedData extends StatelessWidget {
                     child: TextField(
                       decoration: textFieldInputDecoration,
                       onSubmitted: (String typedName) {
-                        // setState(() {
-                        //   isDataLoaded = false;
-                        //   updateUI(cityName: typedName);
-                        // });
+                        onChangedCity(typedName);
                       },
                     ),
                   ),
@@ -231,7 +242,7 @@ class LoadedData extends StatelessWidget {
                       Expanded(
                         child: DetailsWidgets(
                             value:
-                            '${weatherModel != null ? weatherModel!.feelsLike!.round() : 0}°',
+                                '${weatherModel != null ? weatherModel!.feelsLike!.round() : 0}°',
                             title: 'FEELS LIKE'),
                       ),
                       const Padding(
@@ -243,7 +254,7 @@ class LoadedData extends StatelessWidget {
                       Expanded(
                         child: DetailsWidgets(
                             value:
-                            '${weatherModel != null ? weatherModel!.humidity! : 0}%',
+                                '${weatherModel != null ? weatherModel!.humidity! : 0}%',
                             title: 'HUMIDITY'),
                       ),
                       const Padding(
@@ -255,7 +266,7 @@ class LoadedData extends StatelessWidget {
                       Expanded(
                         child: DetailsWidgets(
                             value:
-                            '${weatherModel != null ? weatherModel!.wind!.round() : 0}',
+                                '${weatherModel != null ? weatherModel!.wind!.round() : 0}',
                             title: 'WIND'),
                       ),
                     ],
