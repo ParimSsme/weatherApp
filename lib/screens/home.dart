@@ -112,17 +112,19 @@ class _HomeState extends State<Home> {
           isDataLoaded = false;
           updateUI(cityName: city);
         });
-    });
+    }, isErrorOccurred: isErrorOccured);
   }
 }
 
 class LoadedData extends StatelessWidget {
   final WeatherModel? weatherModel;
+  final bool isErrorOccurred;
   final void Function(String city) onChangedCity;
   const LoadedData({
     super.key,
     required this.weatherModel,
     required this.onChangedCity,
+    required this.isErrorOccurred,
   });
 
   @override
@@ -189,44 +191,44 @@ class LoadedData extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            // isErrorOccured
-            //     ? ErrorMessage(title: title!, message: message!)
-            //     : Expanded(
-            //     child: Column(
-            //       children: [
-            //         Row(
-            //           mainAxisAlignment: MainAxisAlignment.center,
-            //           children: [
-            //             const Icon(
-            //               Icons.location_city,
-            //             ),
-            //             Text(
-            //               weatherModel!.location!,
-            //               style: kLocationTextStyle,
-            //             ),
-            //           ],
-            //         ),
-            //         SvgPicture.asset(
-            //           weatherModel!.icon!,
-            //           color: kLightColor,
-            //           height: 180,
-            //         ),
-            //         const SizedBox(
-            //           height: 40,
-            //         ),
-            //         Text(
-            //           "${weatherModel != null ? weatherModel!.temperature! : 0}\u00B0",
-            //           style: kTempTextStyle,
-            //         ),
-            //         Padding(
-            //           padding: const EdgeInsets.only(left: 12),
-            //           child: Text(
-            //             weatherModel!.description!,
-            //             style: kLocationTextStyle,
-            //           ),
-            //         ),
-            //       ],
-            //     )),
+            isErrorOccurred
+                ? ErrorMessage(title: 'title!', message: 'message!')
+                : Expanded(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.location_city,
+                        ),
+                        Text(
+                          weatherModel!.location!,
+                          style: kLocationTextStyle,
+                        ),
+                      ],
+                    ),
+                    SvgPicture.asset(
+                      weatherModel!.icon!,
+                      color: kLightColor,
+                      height: 180,
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Text(
+                      "${weatherModel != null ? weatherModel!.temperature! : 0}\u00B0",
+                      style: kTempTextStyle,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: Text(
+                        weatherModel!.description!,
+                        style: kLocationTextStyle,
+                      ),
+                    ),
+                  ],
+                )),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
