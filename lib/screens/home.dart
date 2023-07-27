@@ -1,10 +1,9 @@
-import 'package:clima/components/error_message.dart';
-import 'package:clima/services/weather.dart';
-import 'package:clima/utilities/constants.dart';
+import '../components/error_message.dart';
+import '../services/weather.dart';
+import '../utilities/constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import '../components/details_view.dart';
 import '../components/loading_widget.dart';
 import '../models/weather_model.dart';
